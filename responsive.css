@@ -5,6 +5,9 @@
     body{
         overflow-x: hidden;
     }
+    .navbar{
+        display:none;
+      }   
     .projects {
         display: flex;
         flex-direction: column;
