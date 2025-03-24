@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nombre Mystère</title>
+</head>
+<body>
+    <div class="devi">
+        <h2>Devinez le nombre <br> entre 1 et 100</h2>
+        <input type="number" id="guess" placeholder="Entrez un nombre">
+        <button onclick="checkGuess()">Vérifier</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        let randomNumber = Math.floor(Math.random() * 100) + 1;
+
+        function checkGuess() {
+            let userGuess = document.getElementById("guess").value;
+            let result = document.getElementById("result");
+
+            if (userGuess == randomNumber) {
+                result.textContent = "Bravo ! Vous avez trouvé 🎉";
+            } else if (userGuess < randomNumber) {
+                result.textContent = "Trop bas ! Essayez encore.";
+            } else {
+                result.textContent = "Trop haut ! Essayez encore.";
+            }
+        }
+    </script>
+    <style>
+        body{
+            display: flex;
+            background-color: rgb(236, 236, 230) ;
+            padding: 0px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 150px;
+        }
+        h2{
+            color: white;
+        }
+        .devi{
+            position: relative;
+            background-color:rgb(38, 172, 172) ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 10px;
+            height: 300px;
+            width: 300px;
+            
+        }
+        input{
+            height: 30px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        button {
+            height: 30px; 
+            border-radius: 10px;
+            background-color: rgb(13, 13, 220);
+            border-color: aliceblue;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: rgb(39, 39, 115);
+            transform: translateY(-4px);
+        }
+
+
+        
+
+    </style>
+</body>
+</html>

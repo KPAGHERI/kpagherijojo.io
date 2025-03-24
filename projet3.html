@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Déplacement du carré</title>
+    <style>
+        body{
+            background-color:  rgb(236, 236, 230);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+        #game-area {
+            width: 400px;
+            height: 400px;
+            background-color: rgb(38, 172, 172);
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        #player {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            position: absolute;
+            top: 175px;
+            left: 175px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Déplacez le carré avec <br> les flèches du clavier</h2>
+    <div id="game-area">
+        <div id="player"></div>
+    </div>
+
+    <script>
+        let player = document.getElementById("player");
+        let positionX = 175;
+        let positionY = 175;
+        let step = 10;
+
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "ArrowUp" && positionY > 0) {
+                positionY -= step;
+            } else if (event.key === "ArrowDown" && positionY < 350) {
+                positionY += step;
+            } else if (event.key === "ArrowLeft" && positionX > 0) {
+                positionX -= step;
+            } else if (event.key === "ArrowRight" && positionX < 350) {
+                positionX += step;
+            }
+            player.style.top = positionY + "px";
+            player.style.left = positionX + "px";
+        });
+    </script>
+</body>
+</html>

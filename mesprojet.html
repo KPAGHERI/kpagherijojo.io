@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes projets</title>
+</head>
+<body class="corps">
+    <style>
+        .corps {
+            display: flex;
+            background-color:rgb(236, 236, 230) ;
+            flex-wrap: 1;
+        }
+    </style>
+
+
+<!-- premier projet -->
+    <section>
+        <div class="devi">
+            <h2>Devinez le nombre <br> entre 1 et 100</h2>
+            <input type="number" id="guess" placeholder="Entrez un nombre">
+            <button onclick="checkGuess()">Vérifier</button>
+            <p id="result"></p>
+        </div>
+    
+        <script>
+            let randomNumber = Math.floor(Math.random() * 100) + 1;
+    
+            function checkGuess() {
+                let userGuess = document.getElementById("guess").value;
+                let result = document.getElementById("result");
+    
+                if (userGuess == randomNumber) {
+                    result.textContent = "Bravo ! Vous avez trouvé 🎉";
+                } else if (userGuess < randomNumber) {
+                    result.textContent = "Trop bas ! Essayez encore.";
+                } else {
+                    result.textContent = "Trop haut ! Essayez encore.";
+                }
+            }
+        </script>
+        <style>
+            body{
+                display: flex;
+                background-color: rgb(236, 236, 230) ;
+                padding: 0px;
+                justify-content: center;
+                align-items: center;
+                margin-top: 150px;
+            }
+            h2{
+                color: white;
+            }
+            .devi{
+                position: relative;
+                background-color:rgb(38, 172, 172) ;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                border-radius: 10px;
+                height: 300px;
+                width: 300px;
+                
+            }
+            input{
+                height: 30px;
+                border-radius: 10px;
+                margin-bottom: 20px;
+            }
+            button {
+                height: 30px; 
+                border-radius: 10px;
+                background-color: rgb(13, 13, 220);
+                border-color: aliceblue;
+                cursor: pointer;
+            }
+            button:hover{
+                background-color: rgb(39, 39, 115);
+                transform: translateY(-4px);
+            }
+    
+    
+            
+    
+        </style>
+        
+    </section><br><br><br>
+    
+<!-- deuxième projet -->
+    <section>
+        <div class="ppciseau">
+            <h2>Pierre - Papier - Ciseaux</h2>
+            <button onclick="play('pierre')">🪨 Pierre</button>
+            <button onclick="play('papier')">📄 Papier</button>
+            <button onclick="play('ciseaux')">✂️ Ciseaux</button>
+            <p id="results"></p>
+        
+        </div>
+        <script>
+            function play(userChoice) {
+                let choices = ["pierre", "papier", "ciseaux"];
+                let computerChoice = choices[Math.floor(Math.random() * 3)];
+    
+                let resul = "";
+                if (userChoice === computerChoice) {
+                    result = "Égalité ! 🤝";
+                } else if (
+                    (userChoice === "pierre" && computerChoice === "ciseaux") ||
+                    (userChoice === "papier" && computerChoice === "pierre") ||
+                    (userChoice === "ciseaux" && computerChoice === "papier")
+                ) {
+                    result = "Vous gagnez ! 🎉";
+                } else {
+                    result = "L'ordinateur gagne ! 😢";
+                }
+    
+                document.getElementById("results").textContent = `L'ordinateur a choisi ${computerChoice}. ${result}`;
+            }
+            
+        </script>
+        <style>
+            body{
+                background-color: rgb(236, 236, 230) ;
+                display: flex;
+                padding: 0px;
+                justify-content: center;
+                align-items: center;
+                margin-top: 150px;
+            }
+            .ppciseau{
+                background-color: rgb(38, 172, 172) ;
+                position: relative;
+                background-color:rgb(38, 172, 172) ;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                border-radius: 10px;
+                height: 300px;
+                width: 300px;
+    
+            }
+            button{
+                height: 30px; 
+                border-radius: 10px;
+                background-color: rgb(13, 13, 220);
+                border-color: aliceblue;
+                cursor: pointer;
+                width: 100px;
+                margin-bottom: 10px;
+            }
+            button:hover{
+                background-color: rgb(39, 39, 115);
+                transform: translateY(-4px);
+            }
+    
+        </style>
+
+    </section>
+    
+<!-- troixieme projet -->
+    <section>
+        <style>
+            body{
+                background-color:  rgb(236, 236, 230);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+    
+            }
+            #game-area {
+                width: 300px;
+                height: 300px;
+                background-color: rgb(38, 172, 172);
+                position: relative;
+                overflow: hidden;
+                border-radius: 10px;
+            }
+            #player {
+                width: 50px;
+                height: 50px;
+                background-color: red;
+                position: absolute;
+                top: 175px;
+                left: 175px;
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Déplacez le carré avec <br> les flèches du clavier</h2>
+        <div id="game-area">
+            <div id="player"></div>
+        </div>
+    
+        <script>
+            let player = document.getElementById("player");
+            let positionX = 175;
+            let positionY = 175;
+            let step = 10;
+    
+            document.addEventListener("keydown", function(event) {
+                if (event.key === "ArrowUp" && positionY > 0) {
+                    positionY -= step;
+                } else if (event.key === "ArrowDown" && positionY < 350) {
+                    positionY += step;
+                } else if (event.key === "ArrowLeft" && positionX > 0) {
+                    positionX -= step;
+                } else if (event.key === "ArrowRight" && positionX < 350) {
+                    positionX += step;
+                }
+                player.style.top = positionY + "px";
+                player.style.left = positionX + "px";
+            });
+        </script>
+
+    </section>
+    
+</body>
+</html>

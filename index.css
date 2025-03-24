@@ -1,0 +1,282 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+}
+
+header {
+    background: black;
+    color: white;
+    padding: 15px;
+    display: flex;
+
+}
+
+
+
+.logo{
+    
+    padding-left: 50px;
+    position: sticky; 
+    display: inline;
+
+}
+
+
+nav ul {
+
+    list-style: none;
+    margin-left: 600px;
+    margin-top: 0px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px; 
+}
+
+nav ul li a{
+    color: azure;
+    font-size:10px ;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    color:rgb(38, 172, 172) ;
+}
+
+.hamburger{
+    display:none ;
+    cursor: pointer;
+    float: right;
+    position: sticky;
+} 
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+}
+strong{
+    color: rgb(38, 172, 172);
+}
+
+span{
+    color: rgb(38, 172, 172);
+}
+
+.hero {
+    padding: 150px;
+
+    font-size: large;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 10px;
+}
+.Myimg{
+border-radius: 100%;
+height: 350px;
+
+}
+
+
+button {
+    background:rgb(38, 172, 172);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 0.5em;
+    border-radius: 5px;
+    color: white;
+    border-style: initial;
+    overflow: hidden;
+}
+button:hover{
+    background-color:rgb(4, 138, 138) ;
+    transform: translateY(-5px);
+    transform: translateX(5px);
+}
+
+
+.competence{
+
+    background-color: rgb(236, 236, 230) ;
+    padding-bottom: 100px;
+}
+.container {
+    display: flex;
+    gap: 50px;
+    justify-content: space-evenly;
+}
+
+.hardskills {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+.softskills{
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.skill {
+    margin: 10px 0;
+}
+
+.skill p {
+    margin: 5px 0;
+float: left;
+    font-weight: bold;
+}
+
+.progression-bar {
+    width: 100%;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progression {
+    height: 8px;
+    background: rgb(38, 172, 172);
+    width: 0;
+    transition: width 1.5s ease-in-out;
+}
+
+/* .black{
+    color:white;
+    font-size: 2em;
+} */
+
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact{
+    background-color: black;
+    margin-top: -19px;
+    margin-left: -50px;
+    padding-bottom: 50px;
+}
+
+.contact input, .contact textarea {
+    width: 40%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: rgb(38, 172, 172);
+
+}
+
+.contact textarea{
+    height: 200px;
+    border-radius: 10px;
+}
+
+.black{
+    color: white;
+}
+
+.Apropos{
+    color: rgb(38, 172, 172);
+    background-color:rgb(236, 236, 230) ;
+    margin-bottom: 0%;
+
+}
+
+
+.about{
+    display: flex;
+    background-color: rgb(236, 236, 230);
+    padding: 100px;
+    justify-content: space-around;
+    font-size: larger;
+    text-align: left;
+    border-style: ridge;
+}
+
+.Mypicture{
+    border-radius: 50%;
+    height: 200px;
+    border: 5px solid rgb(38, 172, 172)  ;
+}
+.projects{
+    display: flex;
+    padding-bottom: 100px;
+    margin-left: 110px;
+
+}
+
+h2{
+
+    padding: 30px;
+    color:rgb(38, 172, 172)  ;
+}
+
+.project1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(236, 236, 230);
+    height: 250px; 
+    margin: 0px 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 400px;
+
+}
+
+.project2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(236, 236, 230);
+    height: 250px; 
+    margin: 0px 20px;
+    border-radius: 10px;
+    width: 400px;
+}
+
+.project3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(236, 236, 230);
+    height: 250px; 
+    margin: 0px 20px;
+    border-radius: 10px;
+    width: 400px;
+
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 50px;
+}
+

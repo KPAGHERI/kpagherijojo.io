@@ -1,0 +1,130 @@
+/* Responsive Design */
+
+/* Pour les écrans de moins de 1024px */
+@media screen and (max-width: 1024px) {
+    body{
+        overflow-x: hidden;
+    }
+    .projects {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .project1, .project2, .project3 {
+        width: 80%;
+        margin-bottom: 20px;
+        align-items: center;
+        
+    }
+    .hero{
+        align-items: center;
+        padding-left: 50px;
+    }
+    body{
+        overflow-x: hidden;
+    }
+
+}
+
+/* Pour les tablettes (max 768px) */
+@media screen and (max-width: 768px) {
+
+    .about {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .about img {
+        width: 80%;
+        margin-top: 20px;
+    }
+    .competence .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact form {
+        width: 90%;
+        margin: 0 53px;
+    }
+    .contact input, .contact textarea, .contact button {
+        width: 100%;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    
+
+
+    .hamburger {
+        display: block;
+        margin-left: 350px;
+    }
+    .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #111;
+        text-align: center;
+        padding: 10px 0;
+        margin-left: 0px;
+    }
+    .navbar.active {
+        display: flex;
+    }
+    .navbar li {
+        margin: 10px 0;
+    }
+
+
+
+
+}
+
+
+/* Pour les mobiles (max 480px) */
+@media screen and (max-width: 480px) {
+    body{
+        overflow-x: hidden;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+    .hero h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+    .hero img {
+        width: 100%;
+    }
+    .contact form {
+        width: 90%;
+        padding: 10px ;
+
+    }
+    .contact input, .contact textarea, .contact button {
+        width: 50%;
+        font-size: 16px;
+    }
+
+    .competence h2 {
+        text-align: center;
+
+    }
+    #myskill{
+        width: 200px;
+    }
+    footer p {
+        font-size: 14px;
+        text-align: center;
+    }
+    .hamburger {
+        margin-left: 90px;
+    }
+
+}
+
+

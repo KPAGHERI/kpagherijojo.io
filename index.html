@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Josue KPAGHERI</title>
+    <link rel="stylesheet" href="projet.css">
+    <link rel="stylesheet" href="projet1.html">
+    <link rel="stylesheet" href="projet2.html">
+    <link rel="stylesheet" href="projet3.html">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="mesprojet.html">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <header>
+        <div class="logo">KPAGHERI  <span>JOSUE</span></div>
+        <nav>
+        
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>    
+    
+            <ul class="navbar">
+                <li><a href="#hero">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#Projets">Projets</a></li>
+                <li><a href="#competence">Compétences</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero" id="hero">
+        <div>
+            <h1>Je suis <span>JOSUE</span>, Développeur en devenir <br> passionné par le web et le design !</h1><br><br>
+            <button onclick="location.href='mesprojet.html'">Voir mes projets</button>
+        </div>
+        <img src="./PHO/dev.jpg" alt="dev" class="Myimg">
+    </section>
+    
+    
+    <section id="about" >
+        <h2 class="Apropos">À propos </h2>    
+        <div class="about">
+            <div >
+                <p>Je m'appelle <span>JOSUE</span>, passionné par la <br> création de sites web modernes et interactifs.</p>
+                <p>Je suis actuellement étudiant en <strong>développement web</strong>,<br> cherchant à améliorer mes compétences en JavaScript, HTML et CSS.</p>
+                <p>J'adore transformer mes idées en projets concrets <br> et experimenter avec les nouvelles technologies</p><br>
+                <button onclick="location.href='Cvjosuekp.pdf'">Télécharger mon CV</button>
+            </div>
+            <img src="./PHO/Mypicture.jpg" alt="image" class="Mypicture">
+        </div>
+    </section>
+    
+    <section id="Projets" >
+        <h2>Mes Projets</h2>
+        <div class="projects">
+            <div class="project1" class="center">
+                <p>Un mini-jeu interactif en JavaScript <br> utilisant des événements DOM. <br><br>
+                    #html,#css,#js
+                </p>
+                <button onclick="location.href='projet1.html'">Voir</button>
+            </div>
+            <div class="project2">
+                <p>Un mini-jeu interactif en JavaScript <br> utilisant des événements DOM.<br><br>
+                    #html,#css,#js
+                </p>
+                <button onclick="location.href='projet2.html'">Voir</button>
+            </div>
+            <div class="project3">
+                <p>Un mini-jeu interactif en JavaScript <br> utilisant des événements DOM. <br><br>
+                    #html,#css,#js
+                </p>
+                <button onclick="location.href='projet3.html'">Voir</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="competence" id="competence">
+        <h2>Mes competences</h2>
+        <div class="container">       
+            <!-- pour le softskills -->
+
+        <div class="softskills" id="myskill">
+            <h3>Soft skills</h3>
+            <div class="skill">
+                <p>Gestion des projets</p>
+                <div class="progression-bar">
+                    <div class="progression"  style="width: 60%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <p>Résolution de problème</p>
+                <div class="progression-bar">
+                    <div class="progression"  style="width: 40%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <p>Adaptatibilité</p>
+                <div class="progression-bar">
+                    <div class="progression"  style="width: 80%;"></div>
+                </div>
+            </div>
+            
+        </div>
+
+
+        <!-- pour le hardskills -->
+
+        <div class="hardskills" id="myskill">
+            <h3>Hards kills</h3>
+                <div class="skill">
+                    <p>HTML</p>
+                    <div class="progression-bar">
+                        <div class="progression" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>css</p>
+                    <div class="progression-bar">
+                        <div class="progression" style="width: 70%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>JavaScript</p>
+                    <div class="progression-bar">
+                        <div class="progression" style="width: 50%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill">
+                    <p>Vs code</p>
+                    <div class="progression-bar">
+                        <div class="progression" style="width: 95%;"></div>
+                    </div>
+                </div>
+
+        </div>
+
+        </div>
+
+    </section>
+    
+    <section class="contact" id="contactForm">
+        <h2 class="black">Vous avez un <span>projet en tête ?</span> <br><span>Contater-moi</span></h2>
+
+        <form>
+                <input type="text" placeholder="Votre nom" required>
+                <input type="text" placeholder="Votre prénom"required>
+                <input type="text" placeholder="Votre sujet" required>
+                <textarea placeholder="Votre message"required></textarea>
+                <button type="submit" >Envoyer</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>Designed by <span>JOSUE</span> with HTML, CSS, JS</p>
+        <p>&copy; Tous droits réservés - 2025</p>
+    </footer>
+
+    <script src="projet.js"></script>
+</body>
+</html>
