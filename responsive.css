@@ -29,6 +29,21 @@
 
 }
 
+@media screen and (max-width: 1138px){
+    .navbar{
+        display:flex;
+        flex-direction: column;
+        margin-left: 300px;
+
+    }
+    header{
+        display: flex;
+        justify-content: space-evenly;
+
+    }
+}
+
+
 /* Pour les tablettes (max 768px) */
 @media screen and (max-width: 768px) {
 
